@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<%= link_to 'new', new_restaurant_path(@restaurant), class: 'btn btn-link btn-sm' %>
+<div class="shadow mb-5 bg-white rounded">
+  <% @restaurants.each do |restaurant| %>
+    <div class="border-bottom py-2 px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <%= link_to restaurant.name, restaurant_path(restaurant), class: 'font-weight-bolder text-dark' %>
+      </div>
+    </div>
+  <% end %>
+</div>

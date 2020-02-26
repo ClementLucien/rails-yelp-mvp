@@ -1,0 +1,9 @@
+<h1>Restaurant <%=  @restaurant.name %> </h1>
+
+<p>📍 <%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+<p>📞 <%= @restaurant.phone_number %></p>
+
+
+<%= render 'reviews/index', reviews: @restaurant.reviews %>
+<%= render 'reviews/new' %>
